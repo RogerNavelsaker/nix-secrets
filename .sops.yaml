@@ -1,0 +1,48 @@
+keys:
+  # Users
+  - &user_rona 82D7B6F3AF8297688F10508CB692AA74EC31CD0B
+
+  # Hosts
+  - &host_roger-aio age1dltxgfv7q4qusfue3xez7a3qlmaxhamjl5sqm08x65w0x2zhlgnseedzxu
+  - &host_nanoserver age1hxyzl79w4tq9nqjxxcfxh9rvjmaxwl25wc82s5xzzd39egvd0pfq8uetc7
+  - &host_iso age1ccz8vf02v0stt7stjpp4vw3t9fgtfn4d0f7k55703c4m5jasz4cs578ap9
+
+creation_rules:
+  - path_regex: ^hosts/common/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *host_iso
+        - *host_nanoserver
+        - *host_roger-aio
+        pgp:
+        - *user_rona
+
+  - path_regex: ^hosts/nanoserver/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *host_nanoserver
+        - *host_roger-aio
+        pgp:
+        - *user_rona
+
+  - path_regex: ^hosts/iso/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *host_iso
+        - *host_roger-aio
+        pgp:
+        - *user_rona
+        
+  - path_regex: ^home/rona/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *host_roger-aio
+        - *host_nanoserver
+        - *host_iso 
+        pgp:
+        - *user_rona
+
+  - path_regex: ^keys/.+/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - pgp:
+        - *user_rona

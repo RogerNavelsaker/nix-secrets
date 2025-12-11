@@ -1,0 +1,2 @@
+# scripts/default.nix
+_: { }

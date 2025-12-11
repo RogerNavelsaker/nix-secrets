@@ -1,0 +1,5 @@
+secrets.yaml diff=sopsdiffer
+.sops.yaml filter=git-crypt diff=git-crypt
+*.age filter=git-crypt diff=git-crypt
+*.key filter=git-crypt diff=git-crypt
+.decrypted~* filter=git-crypt diff=git-crypt

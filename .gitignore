@@ -1,0 +1,19 @@
+result
+result-*
+
+.direnv
+
+secrets.yaml
+.sops.yaml
+*.age
+*.key
+!*.pub
+.decrypted~*
+
+# AI/LLM tool configs (user-specific, not committed)
+.claude/
+.cursor/
+.copilot/
+.aider*
+.continue/
+.mcp.json
