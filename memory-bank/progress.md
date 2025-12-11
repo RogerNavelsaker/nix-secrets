@@ -11,7 +11,7 @@ tags:
 
 ## Current Status
 
-Repository configured with SOPS encryption and devshell commands.
+Repository sanitized with clean git history. Remote URL corrected to nix-secrets.git. SOPS encryption and devshell commands configured.
 
 ## What Works
 
