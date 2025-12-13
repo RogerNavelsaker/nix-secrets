@@ -33,7 +33,7 @@ creation_rules:
         pgp:
         - *user_rona
         
-  - path_regex: ^home/rona/secrets\.(yaml|yml|json|env|ini)$
+  - path_regex: ^users/rona/secrets\.(yaml|yml|json|env|ini)$
     key_groups:
       - age:
         - *host_roger-aio
