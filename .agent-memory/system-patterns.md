@@ -17,7 +17,7 @@ nixos-secrets/
 ├── hosts/
 │   └── <hostname>/
 │       └── secrets.yaml
-├── home/
+├── users/
 │   └── <username>/
 │       └── secrets.yaml
 └── keys/

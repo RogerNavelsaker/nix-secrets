@@ -32,7 +32,7 @@ SOPS-encrypted secrets repository for nixos-config using age encryption.
 ## Secret Structure
 
 - `hosts/<hostname>/secrets.yaml` - Host-specific secrets
-- `home/<username>/secrets.yaml` - User-specific secrets
+- `users/<username>/secrets.yaml` - User-specific secrets
 - `keys/` - Key management secrets
 
 ## Relations

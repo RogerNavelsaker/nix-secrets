@@ -12,7 +12,7 @@ nixos-secrets/
 ├── hosts/             # Per-host secrets
 │   └── <hostname>/
 │       └── secrets.yaml
-├── home/              # Per-user secrets
+├── users/             # Per-user secrets
 │   └── <username>/
 │       └── secrets.yaml
 ├── keys/              # Key-related secrets

@@ -3,8 +3,8 @@ result-*
 
 .direnv
 
-secrets.yaml
-.sops.yaml
+!secrets.yaml
+!.sops.yaml
 *.age
 *.key
 !*.pub
