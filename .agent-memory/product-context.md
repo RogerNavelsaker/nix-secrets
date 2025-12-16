@@ -18,7 +18,7 @@ tags:
 ## Observations
 
 - [solution] SOPS provides git-friendly encrypted secret files
-- [solution] Age encryption is modern and secure
+- [solution] GPG (Yubikey) for user keys, age (ssh-to-age) for host keys
 - [solution] .sops.yaml defines which keys decrypt which files
 - [solution] Devshell provides convenient editing commands
 

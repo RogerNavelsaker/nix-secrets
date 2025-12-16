@@ -25,9 +25,9 @@ Setting up Claude Code integration with CLAUDE.md and memory-bank.
 
 ## Active Decisions
 
-- Using age for encryption (not GPG)
+- GPG on Yubikey for user keys
+- ssh-to-age for host keys
 - Per-host and per-user secret isolation
-- Yubikey support via age-plugin-yubikey
 
 ## Next Steps
 

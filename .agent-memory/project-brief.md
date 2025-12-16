@@ -19,7 +19,7 @@ SOPS-encrypted secrets repository for nixos-config using age encryption.
 - [scope] Manages encrypted secrets for all NixOS hosts and users
 - [architecture] Flat structure with per-host and per-user secret files
 - [stack] SOPS, age, ssh-to-age, gnupg, age-plugin-yubikey
-- [security] Age encryption with per-file key rules in .sops.yaml
+- [security] GPG (Yubikey) for user keys, ssh-to-age for host keys, per-file rules in .sops.yaml
 
 ## Core Requirements
 

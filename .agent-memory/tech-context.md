@@ -16,10 +16,9 @@ tags:
 | Tool | Purpose |
 |------|---------|
 | sops | Secret encryption/decryption |
-| age | Modern encryption backend |
-| ssh-to-age | SSH to age key conversion |
-| gnupg | PGP support (optional) |
-| age-plugin-yubikey | Hardware key support |
+| gnupg | GPG encryption for user keys (Yubikey) |
+| ssh-to-age | SSH to age key conversion for host keys |
+| age | Age encryption backend for host keys |
 
 ### Development
 

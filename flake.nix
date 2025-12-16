@@ -3,10 +3,8 @@
   description = "Secret management tools for nixos-config";
 
   inputs = {
-    # FlakeHub URLs for version management and caching
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.*.tar.gz";
-
-    flake-utils.url = "https://flakehub.com/f/numtide/flake-utils/0.1.*.tar.gz";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
 
     devshell = {
       url = "github:numtide/devshell";

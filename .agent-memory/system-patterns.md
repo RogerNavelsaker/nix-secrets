@@ -38,14 +38,16 @@ nixos-secrets/
 ```yaml
 # .sops.yaml
 keys:
-  - &host_key age1...
-  - &user_key age1...
+  - &host_key age1...      # ssh-to-age converted host key
+  - &user_key 0xABC123...  # GPG key ID (Yubikey)
 
 creation_rules:
   - path_regex: hosts/nanoserver/.*
     key_groups:
       - age:
         - *host_key
+      - pgp:
+        - *user_key
 ```
 
 ### Secret Editing Pattern
