@@ -13,18 +13,13 @@ pkgs.devshell.mkShell {
     $(type -p menu &>/dev/null && menu)
   '';
 
+  # Central provides: git, fd, rg, bat, eza, jq, nixfmt, deadnix, statix, nix-tree, nixd
   packages = with pkgs; [
-    # Secret management core
     sops
     age
     ssh-to-age
     mkpasswd
-
-    # PGP tools
     gnupg
-
-    # Git for version control
-    git
   ];
 
   commands = [
@@ -80,10 +75,6 @@ pkgs.devshell.mkShell {
     {
       category = "utilities";
       package = "gnupg";
-    }
-    {
-      category = "utilities";
-      package = "git";
     }
   ];
 
