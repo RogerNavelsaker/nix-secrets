@@ -46,9 +46,9 @@ SOPS configuration in `.sops.yaml` defines:
 - Creation rules for new secrets
 - Path-based key assignments
 
-## Protected Repository
+## Repository Policy
 
-**Main branch is PROTECTED.** Use feature branches and PRs.
+The repository may be updated directly when appropriate. Secret material remains encrypted in Git.
 
 ## Related Repositories
 
@@ -58,6 +58,11 @@ SOPS configuration in `.sops.yaml` defines:
 ## Environment Variables
 
 - `SOPS_AGE_KEY_FILE`: Points to age private key (~/.config/sops/age/keys.txt)
+
+## Development Environment
+
+- Preferred interactive environment: Flox + `direnv`
+- `nix develop` remains available as a fallback
 
 ## Recommended MCP Servers
 

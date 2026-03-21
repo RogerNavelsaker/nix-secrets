@@ -1,26 +1,26 @@
 # nixos-secrets
 
-Secret management repository for nixos-config using SOPS and age.
+Secret management repository for nix-config using SOPS and age.
 
-Built with [flake-parts](https://flake.parts) and [devshell](https://github.com/numtide/devshell).
+Preferred interactive environment is Flox + `direnv`, so the development shell does not depend on `flake.nix` or `shell.nix` continuing to evaluate cleanly. The Nix devshell remains available as a fallback.
 
 ## Quick Start
 
-### Using nix develop (flake)
-
-```bash
-nix develop
-```
-
-### Using direnv (automatic)
+### Preferred: Flox + direnv
 
 ```bash
 direnv allow
 ```
 
+### Fallback: nix develop
+
+```bash
+nix develop
+```
+
 ## Available Tools
 
-The development shell includes:
+The Flox environment includes:
 
 - **sops**: Secret operations (edit, encrypt, decrypt)
 - **age**: Modern encryption tool
@@ -31,7 +31,7 @@ The development shell includes:
 
 ## Custom Commands
 
-The devshell provides convenient commands for common operations. Run `menu` to see all available commands:
+The Flox shell provides convenient functions for common operations:
 
 ### Secret Management
 
@@ -89,3 +89,7 @@ SOPS configuration is in [.sops.yaml](.sops.yaml) with encryption rules for:
 ## Environment Variables
 
 - **SOPS_AGE_KEY_FILE**: Automatically set to `$HOME/.config/sops/age/keys.txt`
+
+## Repository Visibility
+
+This repository is intended to be public. Secret material stays encrypted with SOPS/age.

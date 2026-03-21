@@ -1,7 +1,7 @@
 result
 result-*
 
-.direnv
+.direnv/
 
 !secrets.yaml
 !.sops.yaml
