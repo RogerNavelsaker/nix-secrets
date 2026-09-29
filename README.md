@@ -2,17 +2,11 @@
 
 Secret management repository for nix-config using SOPS and age.
 
-Preferred interactive environment is Flox + `direnv`, so the development shell does not depend on `flake.nix` or `shell.nix` continuing to evaluate cleanly. The Nix devshell remains available as a fallback.
+Use this repository's Nix flake devshell (`nix develop`) for its secret-management packages and helper commands. Shared workspace tools are provided by Devenv through the workspace `.envrc` and direnv.
 
 ## Quick Start
 
-### Preferred: Flox + direnv
-
-```bash
-direnv allow
-```
-
-### Fallback: nix develop
+### Project shell
 
 ```bash
 nix develop
@@ -20,18 +14,19 @@ nix develop
 
 ## Available Tools
 
-The Flox environment includes:
+The Nix flake devshell includes:
 
 - **sops**: Secret operations (edit, encrypt, decrypt)
 - **age**: Modern encryption tool
 - **ssh-to-age**: Convert SSH keys to age format
+- **mkpasswd**: Password hash generation
 - **gnupg**: PGP key management
-- **age-plugin-yubikey**: Yubikey support for age
-- **git**: Version control
+
+Git is provided by the shared workspace Devenv environment.
 
 ## Custom Commands
 
-The Flox shell provides convenient functions for common operations:
+The Nix flake devshell provides convenient commands for common operations:
 
 ### Secret Management
 
@@ -88,7 +83,7 @@ SOPS configuration is in [.sops.yaml](.sops.yaml) with encryption rules for:
 
 ## Environment Variables
 
-- **SOPS_AGE_KEY_FILE**: Automatically set to `$HOME/.config/sops/age/keys.txt`
+- **SOPS_AGE_KEY_FILE**: Set by the project shell to `$HOME/.config/sops/age/keys.txt`
 
 ## Repository Visibility
 

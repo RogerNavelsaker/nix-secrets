@@ -57,12 +57,13 @@ The repository may be updated directly when appropriate. Secret material remains
 
 ## Environment Variables
 
-- `SOPS_AGE_KEY_FILE`: Points to age private key (~/.config/sops/age/keys.txt)
+- `SOPS_AGE_KEY_FILE`: Set by the project Nix devshell to `~/.config/sops/age/keys.txt`
 
 ## Development Environment
 
-- Preferred interactive environment: Flox + `direnv`
-- `nix develop` remains available as a fallback
+- Project-specific packages and helper commands: `nix develop` (Nix flake devshell)
+- Shared workspace tools: Devenv, activated by the workspace `.envrc` through direnv.
+
 
 ## Recommended MCP Servers
 

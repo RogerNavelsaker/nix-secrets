@@ -3,3 +3,7 @@ secrets.yaml diff=sopsdiffer
 *.age filter=git-crypt diff=git-crypt
 *.key filter=git-crypt diff=git-crypt
 .decrypted~* filter=git-crypt diff=git-crypt
+.seeds/issues.jsonl merge=union
+.seeds/templates.jsonl merge=union
+.seeds/plans.jsonl merge=union
+.mulch/expertise/*.jsonl merge=union
