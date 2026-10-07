@@ -31,6 +31,16 @@ creation_rules:
         pgp:
         - *user_rona
 
+  - path_regex: ^clusters/nanoserver-miniservers/secrets\.yaml$
+    key_groups:
+      - age:
+        - *host_nanoserver_01
+        - *host_miniserver_01
+        - *host_miniserver_02
+        - *host_miniserver_03
+        pgp:
+        - *user_rona
+
   - path_regex: ^hosts/miniserver-01/secrets\.(yaml|yml|json|env|ini)$
     key_groups:
       - age:
