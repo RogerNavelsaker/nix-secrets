@@ -30,5 +30,5 @@ jobs:
       - name: Check Flake
         run: nix flake check --accept-flake-config
 
-      - name: Build Default Package
-        run: nix build .#default --accept-flake-config --no-link
+      - name: Build Development Shell
+        run: nix build .#devShells.x86_64-linux.default --accept-flake-config --no-link
