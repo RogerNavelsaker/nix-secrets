@@ -34,10 +34,11 @@ nixos-secrets/
 
 | Command | Usage | Description |
 |---------|-------|-------------|
-| `edit-secret` | `edit-secret <file>` | Edit secret with SOPS |
-| `new-secret` | `new-secret <file>` | Create new secret |
-| `ssh-to-age-key` | `ssh-to-age-key <ssh-pub>` | Convert SSH to age |
-| `list-keys` | `list-keys` | List configured keys |
+| nix-secrets | nix-secrets <subcommand> ... | Manage encrypted files, entries, SOPS recipients, and creation-rule associations; no args prints help |
+| edit-secret | edit-secret <file> | Edit an existing encrypted file with SOPS |
+| new-secret | new-secret <file> | Create an encrypted empty YAML mapping |
+| ssh-to-age-key | ssh-to-age-key <ssh-pub> | Convert an SSH Ed25519 public key to age |
+| list-keys | list-keys | List configured public recipient entries (age/PGP values) |
 
 ## Encryption Rules
 

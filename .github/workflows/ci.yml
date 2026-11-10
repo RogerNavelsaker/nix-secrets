@@ -27,6 +27,9 @@ jobs:
           name: rogernavelsaker
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
+      - name: Test secret lifecycle helpers
+        run: nix develop --accept-flake-config --command python3 -m unittest discover -s tests -p 'test_*.py' -v
+
       - name: Check Flake
         run: nix flake check --accept-flake-config
 

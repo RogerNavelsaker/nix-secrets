@@ -10,6 +10,13 @@ keys:
   - &host_miniserver_03 age1dqas0ppallqsucgsqtewc6srnfdx6c9j4nrmxzwknn5mjzgz7qrqmmpcf8
   - &host_iso age1ccz8vf02v0stt7stjpp4vw3t9fgtfn4d0f7k55703c4m5jasz4cs578ap9
 
+  - &vessel_clanker_rowan age1r4xy85rh30zahj0dj26dmpp5uc0r32yk2k8px7ya6crytfcg9dpsplxgw9
+  - &vessel_clanker_jules age1tezjre482qrzxpsl2k7zfp2tdqz3m9l6llpq4erc08f8js2xsacq4fym23
+  - &vessel_clanker_mira age1qhenwqvgr55rx6zflmxcp0crqqxyez9kk9dcamr9r0j0ls64uypsefaq2a
+  - &vessel_clanker_avery age10a3s6f6xx3q5f360hsxjzv859hwt37rzqndkkv9a3xxukvx973gqty3skk
+  - &vessel_clanker_mara age1xsgj3kyjj284zgj7x4fnfl8g5ssdp5rck4slyc3a8lpam8dz0vkq22yymm
+  - &vessel_clanker_alex age1d3py78a9vu6x40nsd560seauuy9fhccgrcvppak9zn7mwm8ttqdqf40rv5
+
 creation_rules:
   - path_regex: ^hosts/common/secrets\.(yaml|yml|json|env|ini)$
     key_groups:
@@ -63,6 +70,54 @@ creation_rules:
         pgp:
         - *user_rona
         
+  - path_regex: ^clankers/rowan/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *vessel_clanker_rowan
+        - *host_roger-aio
+        pgp:
+        - *user_rona
+
+  - path_regex: ^clankers/jules/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *vessel_clanker_jules
+        - *host_roger-aio
+        pgp:
+        - *user_rona
+
+  - path_regex: ^clankers/mira/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *vessel_clanker_mira
+        - *host_roger-aio
+        pgp:
+        - *user_rona
+
+  - path_regex: ^clankers/avery/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *vessel_clanker_avery
+        - *host_roger-aio
+        pgp:
+        - *user_rona
+
+  - path_regex: ^vessels/mara/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *vessel_clanker_mara
+        - *host_roger-aio
+        pgp:
+        - *user_rona
+
+  - path_regex: ^clankers/alex/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *vessel_clanker_alex
+        - *host_roger-aio
+        pgp:
+        - *user_rona
+
   - path_regex: ^users/rona/secrets\.(yaml|yml|json|env|ini)$
     key_groups:
       - age:
@@ -72,6 +127,13 @@ creation_rules:
         - *host_miniserver_02
         - *host_miniserver_03
         - *host_iso 
+        pgp:
+        - *user_rona
+
+  - path_regex: ^users/admin/secrets\.(yaml|yml|json|env|ini)$
+    key_groups:
+      - age:
+        - *host_roger-aio
         pgp:
         - *user_rona
 
